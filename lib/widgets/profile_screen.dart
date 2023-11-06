@@ -8,28 +8,28 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  //TODO 1 : variable
+  bool isSignedIn = true;
+  String fullName = 'Irfan Andika';
+  String userName = 'MDP';
+  int favoriteCandiCount = 0;
+
+  //TODO 5 : fungsi Signin
+  void signIn() {
+    setState(() {
+      isSignedIn = !isSignedIn;
+    });
+  }
+
+  //TODO 6 : fungsi Signout
+  void signOut() {
+    setState(() {
+      isSignedIn = !isSignedIn;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    //TODO 1 : variable
-    bool isSignedIn = true;
-    String fullName = 'Irfan Andika';
-    String userName = 'MDP';
-    int favoriteCandiCount = 0;
-
-    //TODO 5 : fungsi Signin
-    void signIn() {
-      setState(() {
-        isSignedIn = !isSignedIn;
-      });
-    }
-
-    //TODO 6 : fungsi Signout
-    void signOut() {
-      setState(() {
-        isSignedIn = !isSignedIn;
-      });
-    }
-
     return Scaffold(
       body: Stack(
         children: [
